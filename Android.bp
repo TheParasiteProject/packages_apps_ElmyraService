@@ -25,6 +25,7 @@ android_app {
         "kotlin-stdlib",
         "androidx.preference_preference",
         "SettingsLib",
+        "SettingsLibSettingsTheme",
     ],
     defaults: [
         "SettingsLibDefaults",
