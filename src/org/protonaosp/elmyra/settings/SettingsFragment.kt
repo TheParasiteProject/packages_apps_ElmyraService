@@ -18,13 +18,13 @@ package org.protonaosp.elmyra.settings
 
 import android.os.Bundle
 import android.content.SharedPreferences
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import androidx.preference.ListPreference
 import androidx.preference.SwitchPreferenceCompat
 import com.android.settings.widget.LabeledSeekBarPreference
 import com.android.settings.widget.SeekBarPreference
 import com.android.settingslib.widget.MainSwitchPreference
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
 import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
@@ -35,7 +35,7 @@ import org.protonaosp.elmyra.getAction
 import org.protonaosp.elmyra.getActionName
 import org.protonaosp.elmyra.getAllowScreenOff
 
-class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
+class SettingsFragment : SettingsBasePreferenceFragment(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var prefs: SharedPreferences
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
