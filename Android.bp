@@ -20,7 +20,7 @@ android_app {
     system_ext_specific: true,
     certificate: "platform",
     privileged: true,
-    required: ["privapp_whitelist_org.protonaosp.elmyra"],
+    privapp_allowlist: "privapp_whitelist_org.protonaosp.elmyra.xml",
     static_libs: [
         "kotlin-stdlib",
         "androidx.preference_preference",
@@ -36,12 +36,4 @@ android_app {
     proto: {
         type: "nano",
     },
-}
-
-prebuilt_etc {
-    name: "privapp_whitelist_org.protonaosp.elmyra",
-    system_ext_specific: true,
-    sub_dir: "permissions",
-    src: "privapp_whitelist_org.protonaosp.elmyra.xml",
-    filename_from_src: true,
 }
